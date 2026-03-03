@@ -1,0 +1,20 @@
+project_name         = "web-app3"
+aws_region           = "us-east-1"
+instance_type        = "t2.micro"
+ami_id               = "ami-0c55b159cbfafe1f0"
+key_name             = "web-app3-key"
+vpc_cidr             = "10.0.0.0/16"
+subnet_cidr          = "10.0.1.0/24"
+availability_zone    = "us-east-1a"
+ingress_ports        = [22, 80, 443]
+environment          = "production"
+app_name             = "nginx"
+root_volume_size     = 20
+root_volume_type     = "gp2"
+associate_public_ip  = true
+tags = {
+  Project     = "web-app3"
+  Environment = "production"
+  ManagedBy   = "terraform"
+  Application = "nginx"
+}
